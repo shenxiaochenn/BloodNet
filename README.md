@@ -18,6 +18,6 @@ pandas
 d2l(pytorch) 
 *******
 ## Datasets and network weights
-*****
-You can contact chunfeng.lian@mail.xjtu.edu.cn
+
+## You can contact chunfeng.lian@mail.xjtu.edu.cn.
  

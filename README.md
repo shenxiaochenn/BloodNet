@@ -7,4 +7,4 @@
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/1656012846773.jpg)
 ****
 # Class Activation Mapping
-![image]()
+![image](https://github.com/shenxiaochenn/BloodNet/blob/main/cam.jpg)

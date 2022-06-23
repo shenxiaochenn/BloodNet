@@ -10,8 +10,11 @@
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/cam.jpg)
 ## Install  
 pytorch 
+
 numpy 
-pandas  
+
+pandas 
+ 
 d2l(pytorch) 
 *******
 ## Datasets and network weights

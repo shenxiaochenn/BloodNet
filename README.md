@@ -4,7 +4,7 @@
 
 # BloodNet
 ****
-![image](https://github.com/shenxiaochenn/BloodNet/blob/main/Figure%201.pdf)
+![image](https://github.com/shenxiaochenn/BloodNet/blob/main/1656012846773.jpg)
 ****
 # Class Activation Mapping
 ![image]()

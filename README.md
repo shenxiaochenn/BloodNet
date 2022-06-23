@@ -8,3 +8,4 @@
 ****
 # Class Activation Mapping
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/cam.jpg)
+## Install  pytorch numpy pandas  d2l(pytorch) 

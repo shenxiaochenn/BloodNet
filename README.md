@@ -8,4 +8,13 @@
 ****
 # Class Activation Mapping
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/cam.jpg)
-## Install  pytorch numpy pandas  d2l(pytorch) 
+## Install  
+pytorch 
+numpy 
+pandas  
+d2l(pytorch) 
+*******
+## Datasets and network weights
+*****
+You can contact chunfeng.lian@mail.xjtu.edu.cn
+ 

@@ -7,7 +7,7 @@
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/fig1.jpg)
 ****
 # Class Activation Mapping
-![image](https://github.com/shenxiaochenn/BloodNet/blob/main/cam.jpg)
+![image](https://github.com/shenxiaochenn/BloodNet/blob/main/fig5.jpg)
 ## Install  
 pytorch 
 

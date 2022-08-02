@@ -6,18 +6,17 @@
 ****
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/fig1.jpg)
 ****
-# Class Activation Mapping
+# Class Activation Mapping and attention weights map
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/fig5.jpg)
 ## Install  
 pytorch 
-
+timm
 numpy 
-
+pytorch_grad_cam
 pandas 
- 
-d2l(pytorch) 
+torchcam
 *******
 ## Datasets and network weights
 
-## You can contact chunfeng.lian@mail.xjtu.edu.cn.
+## You can get them by registering the use by sending an email to the corresponding author and filling out the questionnaire. chunfeng.lian@mail.xjtu.edu.cn.
  

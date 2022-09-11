@@ -16,7 +16,7 @@ conda create -n bloodnet python==3.X  #(>3.6)
 ```
 [pytorch](https://pytorch.org/)
 ```
-conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 conda install xxx
 pip install xxx
 ```

@@ -1,4 +1,3 @@
-import os
 import sys
 
 
@@ -9,19 +8,18 @@ import numpy as np
 import torch
 import torch.backends.cudnn as cudnn
 from torchvision import transforms, datasets
-from utils import AverageMeter,accuracy
-from model import bloodnet
-from bloodnet50 import bloodnet50
-from lplot import LossHistory
-from model_other import  senet34, resnet34
+from utils.utils import AverageMeter,accuracy
+from model.bloodnet import bloodnet50
+from utils.lplot import LossHistory
 import argparse
 parser = argparse.ArgumentParser('argument for training')
 parser.add_argument('--print_freq', type=int, default=10,
                     help='print frequency')
 parser.add_argument('--epochs', type=int, default=500, help='number of training epochs')
 # dataset
-parser.add_argument('--data_folder', type=str, default='./train1/', help='path to custom dataset')
-parser.add_argument('--valid_folder', type=str, default='./test/', help='path to valid dataset')
+parser.add_argument('--data_folder', type=str, default='../data/train1/', help='path to custom dataset')
+parser.add_argument('--valid_folder', type=str, default='../data/test/', help='path to valid dataset')
+parser.add_argument('--weights', type=str, default='../weight/bloodnet50_new.pth', help='model weight')
 parser.add_argument('--batch_size', type=int, default=64, help='batch_size')
 parser.add_argument('--num_workers', type=int, default=0, help='num of workers to use')
 parser.add_argument('--learning_rate', type=float, default=3e-4,
@@ -37,13 +35,13 @@ train_transform = transforms.Compose([
     transforms.RandomHorizontalFlip(),
     transforms.CenterCrop(96),
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.1046, 0.0929, 0.0939], std=[0.1141, 0.1141, 0.1162]),   #这里重新计算了
+    transforms.Normalize(mean=[0.1046, 0.0929, 0.0939], std=[0.1141, 0.1141, 0.1162]),
 ])
 
 valid_transform = transforms.Compose([
     transforms.CenterCrop(96),
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.1046, 0.0929, 0.0939], std=[0.1141, 0.1141, 0.1162]),   #这里重新计算了
+    transforms.Normalize(mean=[0.1046, 0.0929, 0.0939], std=[0.1141, 0.1141, 0.1162]),
 ])
 
 train_dataset= datasets.ImageFolder(
@@ -71,10 +69,10 @@ for m in model.modules():
     elif isinstance(m, nn.BatchNorm2d):
         nn.init.constant_(m.weight, 1)
         nn.init.constant_(m.bias, 0)
-pretext = torch.load('./bloodnet50_new.pth')
-# model2_dict = model.state_dict()
-# state_dict = {k: v for k, v in pretext_model.items() if k in model2_dict.keys() and np.shape(model2_dict[k]) == np.shape(v)}
-# model2_dict.update(state_dict)
+
+pretext = torch.load(opt.weights)
+
+
 model.load_state_dict(pretext)
 model = model.to(device)
 criterion = torch.nn.CrossEntropyLoss()
@@ -174,7 +172,6 @@ def main():
 
     # training routine
     for epoch in range(1, opt.epochs + 1):
-        #adjust_learning_rate(opt, optimizer, epoch)
 
         # train for one epoch
         time1 = time.time()
@@ -191,7 +188,7 @@ def main():
 
         if loss_val < best_loss:
             best_loss = loss_val
-            torch.save(model.state_dict(), "new.pth")
+            torch.save(model.state_dict(), "my_new.pth")
 
     print('best accuracy: {:.2f}'.format(best_loss))
 

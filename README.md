@@ -11,8 +11,15 @@
 ## Install
 [anaconda](https://docs.conda.io/en/latest/miniconda.html)
 
-pytorch 
-
+```
+conda create -n bloodnet python==3.X  #(>3.6)
+```
+[pytorch](https://pytorch.org/)
+```
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+conda install xxx
+pip install xxx
+```
 timm
 
 numpy 
@@ -21,7 +28,7 @@ pytorch_grad_cam
 
 pandas 
 
-torchcam
+[torchcam](https://github.com/jacobgil/pytorch-grad-cam)
 *******
 ## Usage: To train and/or test the BloodNet
 First, you need to put the data into the data folder and the weights of the model into the weight folder.

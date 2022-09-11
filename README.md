@@ -24,8 +24,6 @@ timm
 
 numpy 
 
-pytorch_grad_cam
-
 pandas 
 
 [torchcam](https://github.com/jacobgil/pytorch-grad-cam)

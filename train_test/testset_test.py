@@ -63,7 +63,7 @@ model.eval()
 top1 = AverageMeter()
 top2 = AverageMeter()
 with torch.no_grad():
-    for idx, (images, labels) in enumerate(test_loader):
+    for idx, (images, labels) in enumerate(val_loader):
 
 
         images = images.cuda(non_blocking=True)

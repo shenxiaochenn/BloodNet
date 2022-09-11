@@ -21,6 +21,13 @@ pandas
 
 torchcam
 *******
+## Usage: To train and/or test the BloodNet
+Train
+```
+cd /BloodNet-main/train_test/
+
+python main_train.py --weights xxx --batch_size xxx --learning_rate xxx
+```
 ## Datasets and network weights
 
 ## You can get them by registering the use by sending an email to the corresponding author and filling out the questionnaire. chunfeng.lian@mail.xjtu.edu.cn.

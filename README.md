@@ -30,7 +30,7 @@ pandas
 
 [torchcam](https://github.com/jacobgil/pytorch-grad-cam)
 *******
-## Usage: To train and/or test the BloodNet
+## Usage: To train and/or test the BloodNet 
 First, you need to put the data into the data folder and the weights of the model into the weight folder.
 ### Train
 ```

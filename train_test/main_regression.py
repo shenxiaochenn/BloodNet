@@ -1,6 +1,4 @@
 import sys
-
-
 import time
 from sklearn.metrics import r2_score
 import torch.nn as nn
@@ -8,21 +6,22 @@ import torch.nn.functional as F
 import torch
 import torch.backends.cudnn as cudnn
 from torchvision import transforms, datasets
-from utils import AverageMeter
-from model import bloodnet
-from lplot import LossHistory
-from bloodnet50 import bloodnet50
+from utils.utils import AverageMeter
+
+from utils.lplot import LossHistory
+from model.bloodnet import bloodnet50
 import numpy as np
 import argparse
-parser = argparse.ArgumentParser('argument for training')
+parser = argparse.ArgumentParser('argument for regression training')
 parser.add_argument('--print_freq', type=int, default=10,
                     help='print frequency')
 parser.add_argument('--epochs', type=int, default=1000, help='number of training epochs')
 # dataset
-parser.add_argument('--data_folder', type=str, default='./train1/', help='path to custom dataset')
-parser.add_argument('--valid_folder', type=str, default='./test/', help='path to valid dataset')
+parser.add_argument('--data_folder', type=str, default='../data/train1/', help='path to custom dataset')
+parser.add_argument('--valid_folder', type=str, default='../data/test/', help='path to valid dataset')
+parser.add_argument('--weights', type=str, default='../weight/seresnet50-60a8950a85b2b.pkl', help='model weight')
 parser.add_argument('--batch_size', type=int, default=128, help='batch_size')
-parser.add_argument('--num_workers', type=int, default=12, help='num of workers to use')
+parser.add_argument('--num_workers', type=int, default=6, help='num of workers to use')
 parser.add_argument('--learning_rate', type=float, default=3e-4,
                     help='learning rate')
 opt = parser.parse_args()
@@ -36,13 +35,13 @@ train_transform = transforms.Compose([
     transforms.RandomHorizontalFlip(),
     transforms.CenterCrop(96),
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.1046, 0.0929, 0.0939], std=[0.1141, 0.1141, 0.1162]),   #这里重新计算了
+    transforms.Normalize(mean=[0.1046, 0.0929, 0.0939], std=[0.1141, 0.1141, 0.1162]),
 ])
 
 valid_transform = transforms.Compose([
     transforms.CenterCrop(96),
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.1046, 0.0929, 0.0939], std=[0.1141, 0.1141, 0.1162]),   #这里重新计算了
+    transforms.Normalize(mean=[0.1046, 0.0929, 0.0939], std=[0.1141, 0.1141, 0.1162]),
 ])
 
 train_dataset= datasets.ImageFolder(
@@ -63,7 +62,7 @@ val_loader = torch.utils.data.DataLoader(
 
 #模型
 model = bloodnet50(num_classes=1)
-pretext_model = torch.load('./seresnet50-60a8950a85b2b.pkl')
+pretext_model = torch.load(opt.weights)
 model2_dict = model.state_dict()
 state_dict = {k: v for k, v in pretext_model.items() if k in model2_dict.keys() and np.shape(model2_dict[k]) == np.shape(v)}
 model2_dict.update(state_dict)
@@ -187,7 +186,7 @@ def main():
 
         if loss_val < best_loss:
             best_loss = loss_val
-            torch.save(model.state_dict(), "bloodnet50_reg.pth")
+            torch.save(model.state_dict(), "bloodnet50_reg_my.pth")
 
 
 

@@ -9,7 +9,8 @@
 # Class Activation Mapping and attention weights map
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/fig5.jpg)
 ## Install
-(https://docs.conda.io/en/latest/miniconda.html)
+[anaconda](https://docs.conda.io/en/latest/miniconda.html)
+
 pytorch 
 
 timm

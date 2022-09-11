@@ -1,0 +1,4 @@
+"bloodnet.pth"  the weight of blooddnet(small)
+"bloodnet50_new.pth"  the weight of blooddnet, you can use it to fine-tune!
+"bloodnet50_reg.pth" the weight of blooddnet(regression), you can use it to fine-tune!
+"seresnet50-60a8950a85b2b.pkl"   the weight of seresnet, you can also use it to fine-tune the bloodnet(clasification) or blooddnet(regression) !

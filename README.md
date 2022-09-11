@@ -8,7 +8,8 @@
 ****
 # Class Activation Mapping and attention weights map
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/fig5.jpg)
-## Install  
+## Install
+(https://docs.conda.io/en/latest/miniconda.html)
 pytorch 
 
 timm
@@ -22,7 +23,7 @@ pandas
 torchcam
 *******
 ## Usage: To train and/or test the BloodNet
-First, you need to put the data into the data file and the weights of the model into the weight folder.
+First, you need to put the data into the data folder and the weights of the model into the weight folder.
 ### Train
 ```
 cd /BloodNet-main/train_test/

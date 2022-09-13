@@ -51,7 +51,7 @@ python regression_test.py #(for regression)
 ## Datasets and network weights
 
 |  | Data | weights |
-| :-----| ----: | :----: |
+| :-----: | :----: | :----: |
 | link | [bloodstain](https://pan.baidu.com/s/1cCS1ky7O9Mcv-gCId1VRGQ) | [model weights](https://pan.baidu.com/s/1b8MPJcDt59vx8Cfm1zE94w) |
 | access code | shen | chen |
 

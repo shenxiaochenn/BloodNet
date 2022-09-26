@@ -57,5 +57,5 @@ python regression_test.py #(for regression)
 
 The name of each folder implies the label of the category (regression).
 
-### Note: The data here are already pre-processed, which means that you only need to follow the code we have written above to successfully reproduce our results. If you want to try to process the data from scratch, or do some other research work, you can cite our paper and try to contact us for more complete pre-processing data and more detailed classification rules. You can get them by registering the use by sending an email to the corresponding author and filling out the questionnaire. chunfeng.lian@mail.xjtu.edu.cn.
+### Note: The data here are already pre-processed. You only need to follow the code we have written above to successfully reproduce our results. For more details, you can get them by registering the use by sending an email to the corresponding author and filling out the questionnaire. chunfeng.lian@mail.xjtu.edu.cn.
  

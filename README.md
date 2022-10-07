@@ -84,7 +84,7 @@ CUDA_VISIBLE_DEVICES=0,1,2 python main_regression.py --weights '../weight/seresn
 | :-----: | :----: | :----: |
 | link(bai du) | [bloodstain](https://pan.baidu.com/s/1cCS1ky7O9Mcv-gCId1VRGQ) | [model weights](https://pan.baidu.com/s/1b8MPJcDt59vx8Cfm1zE94w) |
 | access code | shen | chen |
-| link(fig share) | [data](https://figshare.com/articles/dataset/BloodNet_An_attention-based_deep_network_for_accurate_efficient_and_costless_bloodstain_time_since_deposition_inference/21291825) | [model_weight](https://figshare.com/articles/dataset/BloodNet_An_attention-based_deep_network_for_accurate_efficient_and_costless_bloodstain_time_since_deposition_inference/21291825) | 
+| link(figshare) | [data](https://figshare.com/articles/dataset/BloodNet_An_attention-based_deep_network_for_accurate_efficient_and_costless_bloodstain_time_since_deposition_inference/21291825) | [model_weight](https://figshare.com/articles/dataset/BloodNet_An_attention-based_deep_network_for_accurate_efficient_and_costless_bloodstain_time_since_deposition_inference/21291825) | 
 
 The name of each folder implies the label of the category (regression).
 

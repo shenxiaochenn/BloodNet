@@ -18,7 +18,7 @@ git clone https://github.com/shenxiaochenn/BloodNet.git && cd BloodNet
 3.1 [Install Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
 3.2 Install dependency in command line
-```
+```Bash
 conda create -n bloodnet python=3.8
 
 conda activate bloodnet

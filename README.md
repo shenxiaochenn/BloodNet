@@ -8,7 +8,7 @@
 ****
 # Class Activation Mapping and attention weights map
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/fig5.jpg)
-## Installation Linux
+## Installation (only Linux)
 ### 1. [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 ### 2. Clone the repository in your computer
 ```

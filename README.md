@@ -19,11 +19,29 @@ git clone https://github.com/shenxiaochenn/BloodNet.git && cd BloodNet
 3.2 Install dependency in command line
 ```
 conda create -n bloodnet python=3.8
+
 conda activate bloodnet
+
 conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+
 pip install -r requirements.txt 
 
 ```
+### 4. Prepare the blood dataset
+
+4.1 Download the [data.zip](https://figshare.com/articles/dataset/BloodNet_An_attention-based_deep_network_for_accurate_efficient_and_costless_bloodstain_time_since_deposition_inference/21291825) Dataset under "./data/".
+
+### 5. Prepare the model weight
+
+5.1 Download the [model_weight](https://figshare.com/articles/dataset/BloodNet_An_attention-based_deep_network_for_accurate_efficient_and_costless_bloodstain_time_since_deposition_inference/21291825) model weights under "./weight/".
+
+----bloodnet50_new.pth The weights corresponding to the classification model.
+
+----bloodnet50_reg.pth  The weights corresponding to the regression model.
+
+----bloodnet(small).pth The weights corresponding to the small classification model.
+
+----seresnet50-60a8950a85b2b.pkl The weights corresponding to the Imagenet pretrain model.
 
 
 *******

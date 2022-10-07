@@ -50,7 +50,7 @@ pip install -r requirements.txt
 First, you need to put the data into the data folder and the weights of the model into the weight folder.
 ## a quick start
 
-```
+```python
 (the accuaracy of bloodnet in test dataset)
 CUDA_VISIBLE_DEVICES=0 python testset_test.py
 

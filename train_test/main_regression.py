@@ -1,4 +1,5 @@
 import sys
+sys.path.append("../")
 import time
 from sklearn.metrics import r2_score
 import torch.nn as nn

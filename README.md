@@ -52,29 +52,31 @@ First, you need to put the data into the data folder and the weights of the mode
 
 ```python
 (the accuaracy of bloodnet in test dataset)
-CUDA_VISIBLE_DEVICES=0 python testset_test.py
+CUDA_VISIBLE_DEVICES=0,1,2 python testset_test.py
 
 (the R^2 of bloodnet in test dataset)
-CUDA_VISIBLE_DEVICES=0 python regression_test.py
+CUDA_VISIBLE_DEVICES=0,1,2 python regression_test.py
 
 ```
 ### Train
+
+### 1. train the classification model
 ```
-cd /BloodNet-main/train_test/
+cd ./BloodNet/train_test/
 
-python main_train.py --weights xxx --batch_size xxx --learning_rate xxx
+CUDA_VISIBLE_DEVICES=0,1,2 python main_train.py --weights='../weight/bloodnet50_new.pth' --batch_size=64 --learning_rate=3e-4 --num_workers=8
 
-python main_regression.py --weights xxx --batch_size xxx --learning_rate xxx
+```
+### 1. train the regression model
+```
+cd ./BloodNet/train_test/
+
+
+CUDA_VISIBLE_DEVICES=0,1,2 python main_regression.py --weights '../weight/seresnet50-60a8950a85b2b.pkl' --batch_size=128 --learning_rate=3e-4 --num_workers=8
+
 ```
 
-### Test
-```
-cd /BloodNet-main/train_test/
 
-python testset_test.py  #(for classification)
-
-python regression_test.py #(for regression)
-```
 
 ## Datasets and network weights
 

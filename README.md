@@ -11,6 +11,10 @@
 ## Installation
 1. [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 2. Clone the repository in your computer
+```
+git clone https://github.com/shenxiaochenn/BloodNet.git && cd BloodNet
+```
+
 
 
 *******

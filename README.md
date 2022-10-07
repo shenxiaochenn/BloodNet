@@ -8,25 +8,11 @@
 ****
 # Class Activation Mapping and attention weights map
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/fig5.jpg)
-## Install
-[anaconda](https://docs.conda.io/en/latest/miniconda.html)
+## Installation
+1. [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2. Clone the repository in your computer
 
-```
-conda create -n bloodnet python==3.X  #(>3.6)
-```
-[pytorch](https://pytorch.org/)
-```
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-conda install xxx
-pip install xxx
-```
-timm
 
-numpy 
-
-pandas 
-
-[torchcam](https://github.com/jacobgil/pytorch-grad-cam)
 *******
 ## Usage: To train and/or test the BloodNet 
 First, you need to put the data into the data folder and the weights of the model into the weight folder.

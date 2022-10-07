@@ -16,6 +16,7 @@ git clone https://github.com/shenxiaochenn/BloodNet.git && cd BloodNet
 ```
 ### 3. Build dependencies
 3.1 [Install Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
+
 3.2 Install dependency in command line
 ```
 conda create -n bloodnet python=3.8

@@ -8,13 +8,22 @@
 ****
 # Class Activation Mapping and attention weights map
 ![image](https://github.com/shenxiaochenn/BloodNet/blob/main/fig5.jpg)
-## Installation
-1. [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-2. Clone the repository in your computer
+## Installation Linux
+### 1. [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+### 2. Clone the repository in your computer
 ```
 git clone https://github.com/shenxiaochenn/BloodNet.git && cd BloodNet
 ```
+### 3. Build dependencies
+3.1 [Install Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
+3.2 Install dependency in command line
+```
+conda create -n bloodnet python=3.8
+conda activate bloodnet
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+pip install -r requirements.txt 
 
+```
 
 
 *******

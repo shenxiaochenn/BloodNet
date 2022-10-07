@@ -49,14 +49,15 @@ pip install -r requirements.txt
 ## Usage: To train and/or test the BloodNet 
 First, you need to put the data into the data folder and the weights of the model into the weight folder.
 ## a quick start
-'''
+
+```
 (the accuaracy of bloodnet in test dataset)
 CUDA_VISIBLE_DEVICES=0 python testset_test.py
 
 (the R^2 of bloodnet in test dataset)
 CUDA_VISIBLE_DEVICES=0 python regression_test.py
 
-'''
+```
 ### Train
 ```
 cd /BloodNet-main/train_test/

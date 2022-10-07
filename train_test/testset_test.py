@@ -1,3 +1,5 @@
+import sys
+sys.path.append("../")
 import torch
 import torch.backends.cudnn as cudnn
 from torchvision import transforms, datasets

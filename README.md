@@ -88,5 +88,5 @@ CUDA_VISIBLE_DEVICES=0,1,2 python main_regression.py --weights '../weight/seresn
 
 The name of each folder implies the label of the category (regression).
 
-### Note: The data here are already pre-processed. You only need to follow the code we have written above to successfully reproduce our results. For more details, you can get them by registering the use by sending an email to the corresponding author and filling out the questionnaire. chunfeng.lian@mail.xjtu.edu.cn.
+### Note: The data here are already pre-processed. You only need to follow the code we have written above to successfully reproduce our results. For more details or if you have any concerns, please do not hesitate to contact us via chunfeng.lian@xjtu.edu.cn.
  
